@@ -55,10 +55,8 @@ def post_detail(request, id):
         if p['id'] == id:
             post = p
             break
-    
     if post is None:
         raise Http404("Пост не найден")
-    
     context = {'post': post}
     return render(request, 'blog/detail.html', context)  # blog/detail.html
 
