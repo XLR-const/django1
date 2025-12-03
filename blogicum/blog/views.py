@@ -49,6 +49,7 @@ def index(request):
     context = {'posts': reversed_posts}
     return render(request, 'blog/index.html', context)  # blog/index.html
 
+
 def post_detail(request, id):
     post = None
     for p in posts:
@@ -59,6 +60,7 @@ def post_detail(request, id):
         raise Http404("Пост не найден")
     context = {'post': post}
     return render(request, 'blog/detail.html', context)  # blog/detail.html
+
 
 def category_posts(request, category_slug):
     context = {'category_slug': category_slug}
