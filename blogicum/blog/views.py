@@ -44,6 +44,7 @@ posts = [
     },
 ]
 
+
 def index(request):
     reversed_posts = list(reversed(posts))
     context = {'posts': reversed_posts}
